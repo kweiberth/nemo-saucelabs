@@ -1,5 +1,5 @@
 'use strict';
-var SauceLabs   = require("./lib/saucelabs");
+var SauceLabs = require("./lib/saucelabs");
 
 module.exports = {
 
