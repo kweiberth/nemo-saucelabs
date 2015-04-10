@@ -1,10 +1,11 @@
 {
   "name": "nemo-saucelabs",
   "version": "0.1.0",
-  "description": "saucelabs plugin for nemo",
+  "description": "updates Saucelabs jobs with test information and test results",
   "main": "index.js",
 
   "author": "kushang gajjar <kugajjar@paypal.com>",
+
   "repository": {
     "type": "git",
     "url": "https://github.paypal.com/kugajjar/nemo-saucelabs"
