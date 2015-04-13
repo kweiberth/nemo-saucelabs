@@ -44,7 +44,7 @@ Once `nemo-saucelabs` plugin is registered, you will have `nemo.saucelabs` objec
 
 ### Methods
 
-<h5 class="name" id="allDisabled"><span class="type-signature"></span>updateJob<span class="signature">(data, callback)</span>
+<h5 class="name" id="allDisabled"><span class="type-signature"></span>1. updateJob<span class="signature">(data, callback)</span>
 
 <dt>
 <h6 class="name" id="allDisabled"><span class="type-signature">Request Fields for 'updateJob' method</span> 
@@ -66,7 +66,7 @@ nemo.saucelabs.updateJob({  name: scenario.getName(),
 ```
 </dt>
 
-<h5 class="name" id="allDisabled"><span class="type-signature"></span>isJobPassed<span class="signature">(isPassed, callback)</span>
+<h5 class="name" id="allDisabled"><span class="type-signature"></span>2. isJobPassed<span class="signature">(isPassed, callback)</span>
 
 <h6 class="name" id="allDisabled"><span class="type-signature">Request Fields for 'isJobPassed' method</span> 
 ```javascript
