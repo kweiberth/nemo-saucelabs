@@ -61,7 +61,7 @@ Once `nemo-saucelabs` plugin is registered, you will have `nemo.saucelabs` objec
 nemo.saucelabs.updateJob({  name: scenario.getName(),
                             tags: scenario.getTags(),
                             build: build_id,
-                            custom-data: {testInfo: 'this job will test the scenario...'}
+                            custom-data: {testInfo: 'information about test or cause of test failure...'}
                           }, callback);
 ```
 </dt>
