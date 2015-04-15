@@ -78,3 +78,14 @@ nemo.saucelabs.updateJob({  name: scenario.getName(),
 @After:
 nemo.saucelabs.isJobPassed(!scenario.isFailed(), callback);
 ```
+
+</dt>
+
+<h5 class="name" id="allDisabled"><span class="type-signature"></span>3. getJobUrl<span class="signature">()</span>
+
+<h6 class="name" id="allDisabled"><span class="type-signature">Example</span> 
+```javascript
+@After:
+//print on report
+nemo.saucelabs.getJobUrl();
+```
