@@ -88,4 +88,5 @@ nemo.saucelabs.isJobPassed(!scenario.isFailed(), callback);
 @After:
 //print on report
 nemo.saucelabs.getJobUrl();
+//e.g. https://saucelabs.com/tests/153a38fac7ab48869e7b3b9c3c567665
 ```
