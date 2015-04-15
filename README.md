@@ -86,7 +86,6 @@ nemo.saucelabs.isJobPassed(!scenario.isFailed(), callback);
 <h6 class="name" id="allDisabled"><span class="type-signature">Example</span> 
 ```javascript
 @After:
-//print on report
 nemo.saucelabs.getJobUrl();
-//e.g. https://saucelabs.com/tests/153a38fac7ab48869e7b3b9c3c567665
+//e.g. https://saucelabs.com/tests/153a38fac7ab48869e7b3b9c3c567665, can be printed on report for reference
 ```
