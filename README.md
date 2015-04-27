@@ -50,7 +50,8 @@ Once `nemo-saucelabs` plugin is registered, you will have `nemo.saucelabs` objec
 <h6 class="name" id="allDisabled"><span class="type-signature">Request Fields for 'updateJob' method</span> 
 ```javascript
     name: [string] update the job name,
-    tags: [list of strings] update the job tags,
+    cucumber_tags: [scenario.getTags()] nemo-sauce will traverse cucumber tags and get tag names to update the job tags
+    tags: [list of strings] array of tags to update the job tags,
     build: [int] The build number being tested,
     custom-data: [JSON] a set of key-value pairs with any extra info that a user would like to add to the job. Max 64KB.
 ```
@@ -59,7 +60,7 @@ Once `nemo-saucelabs` plugin is registered, you will have `nemo.saucelabs` objec
 ```javascript
 @Before:
 nemo.saucelabs.updateJob({  name: scenario.getName(),
-                            tags: scenario.getTags(),
+                            cucumber_tags: scenario.getTags(),
                             build: build_id,
                             custom-data: {testInfo: 'information about test or cause of test failure...'}
                           }, callback);
