@@ -3,19 +3,16 @@ var SauceLabs = require("./lib/saucelabs");
 
 module.exports = {
 
-    setup: function(config, result, callback) {
+    setup: function(sauceCredentials, nemo, callback) {
 
-        var returnObj = result;
-
-        /** @namespace that.props.serverCaps */
         var options = {
-            username: config.serverCaps.username,
-            access_key: config.serverCaps.accessKey,
-            driver: result.driver
+            username: sauceCredentials.username,
+            access_key: sauceCredentials.accessKey,
+            driver: nemo.driver
         };
 
-        returnObj.saucelabs = new SauceLabs(options);
+        nemo.saucelabs = new SauceLabs(options);
 
-        callback(null, config, returnObj);
+        callback(null);
     }
 };
