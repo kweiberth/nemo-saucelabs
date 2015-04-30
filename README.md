@@ -3,7 +3,7 @@
 
 ### Details
 
-Once `nemo-saucelabs` plugin is registered, you will have `nemo.saucelabs` object available. `nemo.saucelabs` exposes methods called `updateJob` and `isJobPassed` to help update saucelabs test job and test results.
+'nemo-saucelabs' plugin exposes methods to update sauce labs job. Once `nemo-saucelabs` plugin is registered, you will have `nemo.saucelabs` object available. `nemo.saucelabs` exposes methods called `updateJob` and `isJobPassed` to help update saucelabs test job and test results.
 
 ### Methods
 
