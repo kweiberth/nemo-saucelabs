@@ -91,7 +91,6 @@ Define saucalabs `username` and `access_key` to the config object and register t
 }
 ```
 
-
 ### Installation for nemo version >v1.0
 
 ```npm install nemo-saucelabs --save-dev```
