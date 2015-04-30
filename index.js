@@ -9,8 +9,8 @@ module.exports = {
 
         /** @namespace that.props.serverCaps */
         var options = {
-            username: config.serverCaps.username,
-            access_key: config.serverCaps.accessKey,
+            username: result.props.serverCaps.username,
+            access_key: result.props.serverCaps.accessKey,
             driver: result.driver
         };
 
