@@ -33,8 +33,8 @@ Define sauce-labs `username` and `accessKey` in your config.json and under `serv
 ```javascript
 "serverCaps": {
     ... 
-    username: config.serverCaps.username,
-    accessKey: config.serverCaps.accessKey,
+    username: "sauce-username,
+    accessKey: "sauce-accessKey",
     ...
 }
 ```
