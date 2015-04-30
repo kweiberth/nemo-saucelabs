@@ -3,11 +3,11 @@ var SauceLabs = require("./lib/saucelabs");
 
 module.exports = {
 
-    setup: function(sauceCredentials, nemo, callback) {
+    setup: function(nemo, callback) {
 
         var options = {
-            username: sauceCredentials.username,
-            access_key: sauceCredentials.accessKey,
+            username: process.env['driver'].serverCaps.username,
+            access_key: process.env['driver'].serverCaps.accessKey,
             driver: nemo.driver
         };
 
