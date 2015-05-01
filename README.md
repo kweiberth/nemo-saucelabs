@@ -68,7 +68,7 @@ Add dependencies to package.json and install.
 
 ### Configuration
 
-Add nemo-saucelabs to your `config/config.json` file. 
+Define `nemo-saucelabs` plugin to your `config/config.json` under `plugins` section and define sauce labs `username` and `accessKey` under `serverCaps` section. 
 
 ```javascript
     
