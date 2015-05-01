@@ -7,7 +7,7 @@ module.exports = {
 
         var options = {
             username: process.env['driver'].serverCaps.username,
-            access_key: process.env['driver'].serverCaps.accessKey,
+            accessKey: process.env['driver'].serverCaps.accessKey,
             driver: nemo.driver
         };
 
