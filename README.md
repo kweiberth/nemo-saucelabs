@@ -1,9 +1,8 @@
 ## nemo-saucelabs
 
-
 ### Details
 
-'nemo-saucelabs' plugin exposes methods to update sauce labs job. Once `nemo-saucelabs` plugin is registered, you will have `nemo.saucelabs` object available. `nemo.saucelabs` exposes methods called `updateJob` and `isJobPassed` to help update saucelabs test job and test results.
+`nemo-saucelabs` plugin exposes methods to update and get information about sauce labs job. Once `nemo-saucelabs` plugin is registered, you will have `nemo.saucelabs` object available. 
 
 ### Methods
 
@@ -54,7 +53,7 @@ nemo.saucelabs.getJobUrl();
 //e.g. https://saucelabs.com/tests/153a38fac7ab48869e7b3b9c3c567665, can be printed on report for reference
 ```
 
-### Installation for nemo version >v1.0
+### Installation for nemo version <v1.0
 
 ```npm install nemo-saucelabs --save-dev```
 
@@ -63,7 +62,7 @@ Add dependencies to package.json and install.
 ```javascript
 	...
     "nemo": "^0.4.0",
-    "nemo-saucelabs": "^0.1.1",
+    "nemo-saucelabs": "0.1.2",
 	...
 ```
 
@@ -82,14 +81,17 @@ Add nemo-saucelabs to your `config/nemo-plugins.json` file.
 }
 ```
 
-Define saucalabs `username` and `access_key` to the config object and register the plugin
+Define saucalabs `username` and `accessKey` to the config.json `serverCaps`
 
 ```javascript
-{
-    username: config.serverCaps.username,
-    access_key: config.serverCaps.accessKey,
-}
+ "serverCaps": {
+            "username": "shop",
+            "accessKey": "8ab3d84c-859c-41fb-3266-cff489be9862", //not a correct access key
+            "platform": "MAC",
+            "version": "27.0"
+      }
 ```
+
 
 ### Installation for nemo version >v1.0
 
@@ -109,11 +111,11 @@ Add dependencies to package.json and install.
 Add nemo-saucelabs to your `config/config.json` file. 
 
 ```javascript
-{
-	"plugins": {
-		"saucelabs": {
-			"module": "nemo-saucelabs"
-		}
+    
+    	"plugins": {
+		    "saucelabs": {
+		        "module": "nemo-saucelabs"
+		    }
 	},
 	
 	"driver": {
@@ -122,11 +124,9 @@ Add nemo-saucelabs to your `config/config.json` file.
         "server": "http://shop:8ab3d84c-859c-41fb-3266-cff489be9862@ondemand.saucelabs.com:80/wd/hub",
     
         "serverCaps": {
-            "browser": "chrome",
             "username": "shop",
             "accessKey": "8ab3d84c-859c-41fb-3266-cff489be9862", //not a correct access key
             "platform": "MAC",
             "version": "27.0"
-      }
-}
+      	}
 ```
