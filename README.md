@@ -2,7 +2,7 @@
 
 ### Details
 
-`nemo-saucelabs` plugin exposes methods to update and get information about sauce labs job. Once `nemo-saucelabs` plugin is registered, you will have `nemo.saucelabs` object available. 
+`nemo-saucelabs` plugin exposes methods to update the meta-data of running Sauce Labs job, e.g. Test Name, Test tags, Build Id and Test result (Pass/Fail) on Sauce Labs dashboard. Once `nemo-saucelabs` plugin is registered, you will have `nemo.saucelabs` object available. 
 
 ### Methods
 
