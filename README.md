@@ -119,7 +119,7 @@ Add nemo-saucelabs to your `config/nemo-plugins.json` file.
 }
 ```
 
-Define saucalabs `username` and `accessKey` to the config.json `serverCaps`
+Define saucalabs `username` and `accessKey` to the config.json under `serverCaps` option
 
 ```javascript
  "serverCaps": {
