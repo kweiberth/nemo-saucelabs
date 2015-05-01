@@ -1,0 +1,21 @@
+{
+  "name": "nemo-saucelabs",
+  "version": "0.1.2",
+  "description": "updates Saucelabs jobs with test information and test results",
+  "main": "index.js",
+
+  "author": "kushang gajjar <kugajjar@paypal.com>",
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.paypal.com/kugajjar/nemo-saucelabs"
+  },
+  "devDependencies": {
+  },
+  "dependencies": {
+    "requestretry": "^1.2.2",
+    "debug" : "^2.1.3",
+    "underscore": "^1.7.0",
+    "nemo": "^1.0.4"
+  }
+}
