@@ -66,8 +66,6 @@ Add dependencies to package.json and install.
 	...
 ```
 
-### Configuration
-
 Define `nemo-saucelabs` plugin to your `config/config.json` under `plugins` section and define sauce labs `username` and `accessKey` under `serverCaps` section. 
 
 ```javascript
@@ -104,9 +102,7 @@ Add dependencies to package.json and install.
 	...
 ```
 
-### Configuration
-
-Add nemo-saucelabs to your `config/nemo-plugins.json` file. 
+Define `nemo-saucelabs` plugin to your `config/nemo-plugins.json` file. 
 
 ```javascript
 {
@@ -119,7 +115,7 @@ Add nemo-saucelabs to your `config/nemo-plugins.json` file.
 }
 ```
 
-Define saucalabs `username` and `accessKey` to the config.json under `serverCaps` option
+Define sauce labs `username` and `accessKey` to the config.json under `serverCaps` section
 
 ```javascript
  "serverCaps": {
