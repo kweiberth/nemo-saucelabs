@@ -53,9 +53,7 @@ nemo.saucelabs.getJobUrl();
 //e.g. https://saucelabs.com/tests/153a38fac7ab48869e7b3b9c3c567665, can be printed on report for reference
 ```
 
-### Installation for nemo@v1.0 and greater versions
-
-```npm install nemo-saucelabs --save-dev```
+### Installation for nemo@v1.x.x
 
 Add dependencies to package.json and install.
 
@@ -74,24 +72,25 @@ Define `nemo-saucelabs` plugin to your `config/config.json` under `plugins` sect
 		    "saucelabs": {
 		        "module": "nemo-saucelabs"
 		    }
+		 ...
 	},
 	
 	"driver": {
         "browser": "chrome",
     
-        "server": "http://shop:8ab3d84c-859c-41fb-3266-cff489be9862@ondemand.saucelabs.com:80/wd/hub",
+        "server": "http://sauce-username:8ab3d84c-859c-41fb-3266-cff489be9862@ondemand.saucelabs.com:80/wd/hub",
     
         "serverCaps": {
-            "username": "shop",
+            "username": "sauce-username",
             "accessKey": "8ab3d84c-859c-41fb-3266-cff489be9862", //not a real access key
             "platform": "MAC",
             "version": "27.0"
       	}
 ```
 
-### Installation for pre@nemo1.0 and lesser versions
-
 ```npm install nemo-saucelabs --save-dev```
+
+### Installation for pre@nemo0.x.x
 
 Add dependencies to package.json and install.
 
@@ -111,6 +110,7 @@ Define `nemo-saucelabs` plugin to your `config/nemo-plugins.json` file.
 			"module": "nemo-saucelabs"
 			"register": true
 		}
+		...
 	}
 }
 ```
@@ -119,9 +119,11 @@ Define sauce labs `username` and `accessKey` to the config.json under `serverCap
 
 ```javascript
  "serverCaps": {
-            "username": "shop",
+            "username": "sauce-username",
             "accessKey": "8ab3d84c-859c-41fb-3266-cff489be9862", //not a real access key
             "platform": "MAC",
             "version": "27.0"
       }
 ```
+
+```npm install nemo-saucelabs --save-dev```
