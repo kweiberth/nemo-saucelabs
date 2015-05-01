@@ -62,7 +62,7 @@ Add dependencies to package.json and install.
 ```javascript
 	...
     "nemo": "^0.4.0",
-    "nemo-saucelabs": "0.1.2",
+    "nemo-saucelabs": "^0.1.2",
 	...
 ```
 
