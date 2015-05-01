@@ -86,7 +86,7 @@ Define saucalabs `username` and `accessKey` to the config.json `serverCaps`
 ```javascript
  "serverCaps": {
             "username": "shop",
-            "accessKey": "8ab3d84c-859c-41fb-3266-cff489be9862", //not a correct access key
+            "accessKey": "8ab3d84c-859c-41fb-3266-cff489be9862", //not a real access key
             "platform": "MAC",
             "version": "27.0"
       }
@@ -125,7 +125,7 @@ Add nemo-saucelabs to your `config/config.json` file.
     
         "serverCaps": {
             "username": "shop",
-            "accessKey": "8ab3d84c-859c-41fb-3266-cff489be9862", //not a correct access key
+            "accessKey": "8ab3d84c-859c-41fb-3266-cff489be9862", //not a real access key
             "platform": "MAC",
             "version": "27.0"
       	}
