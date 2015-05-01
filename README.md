@@ -53,7 +53,7 @@ nemo.saucelabs.getJobUrl();
 //e.g. https://saucelabs.com/tests/153a38fac7ab48869e7b3b9c3c567665, can be printed on report for reference
 ```
 
-### Installation for nemo@1.0 and greater versions
+### Installation for nemo@v1.0 and greater versions
 
 ```npm install nemo-saucelabs --save-dev```
 
