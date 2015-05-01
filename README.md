@@ -1,48 +1,8 @@
 ## nemo-saucelabs
 
-### Installation
-
-```npm install nemo-saucelabs --save-dev```
-
-Add dependencies to package.json and install.
-
-```javascript
-	...
-    "nemo": "^0.4.0",
-    "nemo-saucelabs": "0.1.2",
-	...
-```
-
-### Configuration
-
-Add nemo-saucelabs to your `config/nemo-plugins.json` file. 
-
-```javascript
-{
-	"plugins": {
-		"nemo-saucelabs": {
-			"module": "nemo-saucelabs"
-			"register": true
-		}
-	}
-}
-```
-
-Define sauce-labs `username` and `accessKey` in your config.json and under `serverCaps`
-
-```javascript
-"serverCaps": {
-    ... 
-    username: "sauce-username",
-    accessKey: "sauce-accessKey",
-    ...
-}
-```
-
 ### Details
 
-Once `nemo-saucelabs` plugin is registered, you will have `nemo.saucelabs` object available. `nemo.saucelabs` exposes methods called `updateJob` and `isJobPassed` to help update saucelabs test job and test results.
-
+`nemo-saucelabs` plugin exposes methods to update and get information about sauce labs job. Once `nemo-saucelabs` plugin is registered, you will have `nemo.saucelabs` object available. 
 
 ### Methods
 
@@ -91,4 +51,77 @@ nemo.saucelabs.isJobPassed(!scenario.isFailed(), callback);
 @After:
 nemo.saucelabs.getJobUrl();
 //e.g. https://saucelabs.com/tests/153a38fac7ab48869e7b3b9c3c567665, can be printed on report for reference
+```
+
+### Installation for nemo@v1.0 and greater versions
+
+```npm install nemo-saucelabs --save-dev```
+
+Add dependencies to package.json and install.
+
+```javascript
+	...
+    "nemo": "^1.0.4",
+    "nemo-saucelabs": "^1.0.0",
+	...
+```
+
+Define `nemo-saucelabs` plugin to your `config/config.json` under `plugins` section and define sauce labs `username` and `accessKey` under `serverCaps` section. 
+
+```javascript
+    
+    	"plugins": {
+		    "saucelabs": {
+		        "module": "nemo-saucelabs"
+		    }
+	},
+	
+	"driver": {
+        "browser": "chrome",
+    
+        "server": "http://shop:8ab3d84c-859c-41fb-3266-cff489be9862@ondemand.saucelabs.com:80/wd/hub",
+    
+        "serverCaps": {
+            "username": "shop",
+            "accessKey": "8ab3d84c-859c-41fb-3266-cff489be9862", //not a real access key
+            "platform": "MAC",
+            "version": "27.0"
+      	}
+```
+
+### Installation for pre@nemo1.0 and lesser versions
+
+```npm install nemo-saucelabs --save-dev```
+
+Add dependencies to package.json and install.
+
+```javascript
+	...
+    "nemo": "^0.4.0",
+    "nemo-saucelabs": "^0.1.3",
+	...
+```
+
+Define `nemo-saucelabs` plugin to your `config/nemo-plugins.json` file. 
+
+```javascript
+{
+	"plugins": {
+		"nemo-saucelabs": {
+			"module": "nemo-saucelabs"
+			"register": true
+		}
+	}
+}
+```
+
+Define sauce labs `username` and `accessKey` to the config.json under `serverCaps` section
+
+```javascript
+ "serverCaps": {
+            "username": "shop",
+            "accessKey": "8ab3d84c-859c-41fb-3266-cff489be9862", //not a real access key
+            "platform": "MAC",
+            "version": "27.0"
+      }
 ```
