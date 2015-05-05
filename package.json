@@ -17,5 +17,13 @@
     "debug" : "^2.1.3",
     "underscore": "^1.7.0",
     "nemo": "^1.0.4"
-  }
+  },
+  "keywords": [
+    "nemo",
+    "sauce",
+    "sauce labs",
+    "saucelabs"
+  ],
+  "author": "Kushang <g.kushang@gmail.com>",
+  "license": "MIT"
 }
