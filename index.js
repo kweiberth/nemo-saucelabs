@@ -6,8 +6,8 @@ module.exports = {
     setup: function(nemo, callback) {
 
         var options = {
-            username: process.env['driver'].serverCaps.username,
-            accessKey: process.env['driver'].serverCaps.accessKey,
+            username: nemo._config.get('driver').serverCaps.username,
+            accessKey: nemo._config.get('driver').serverCaps.accessKey,
             driver: nemo.driver
         };
 
