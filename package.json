@@ -24,5 +24,6 @@
     "sauce labs",
     "saucelabs"
   ],
-  "author": "Kushang <g.kushang@gmail.com>"
+  "author": "Kushang <g.kushang@gmail.com>",
+  "license": "MIT"
 }
