@@ -24,7 +24,7 @@ nemo.saucelabs.updateJob({  name: scenario.getName(),
                           }, callback);
 ```
 
-#### isJobPassed(isPassed, callback)
+##### isJobPassed(isPassed, callback)
 
 request fields: 
 ```javascript
@@ -36,7 +36,7 @@ example:
 nemo.saucelabs.isJobPassed(!scenario.isFailed(), callback);
 ```
 
-#### getJobUrl()
+##### getJobUrl()
 
 example: 
 ```javascript
