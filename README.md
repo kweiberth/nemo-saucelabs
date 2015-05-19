@@ -4,19 +4,17 @@
 
 ### Methods
 
-<h5 class="name" id="allDisabled"><span class="type-signature"></span>1. updateJob<span class="signature">(data, callback)</span>
+##### updateJob(data, callback)
 
-<dt>
-<h6 class="name" id="allDisabled"><span class="type-signature">Request Fields for 'updateJob' method</span> 
+request fields:
 ```javascript
-    name: [string] update the job name,
-    cucumber_tags: [scenario.getTags()] nemo-sauce will traverse cucumber tags and get tag names to update the job tags
-    tags: [list of strings] array of tags to update the job tags,
-    build: [int] The build number being tested,
-    custom-data: [JSON] a set of key-value pairs with any extra info that a user would like to add to the job. Max 64KB.
+    name:           [string] update the job name,
+    cucumber_tags:  [scenario.getTags()] nemo-sauce will traverse cucumber tags and get tag names to update the job tags
+    tags:           [list of strings] array of tags to update the job tags,
+    build:          [int] The build number being tested,
+    custom-data:    [JSON] a set of key-value pairs with any extra info that a user would like to add to the job. Max 64KB.
 ```
-
-<h6 class="name" id="allDisabled"><span class="type-signature">Example</span> 
+example:
 ```javascript
 @Before:
 nemo.saucelabs.updateJob({  name: scenario.getName(),
@@ -25,26 +23,22 @@ nemo.saucelabs.updateJob({  name: scenario.getName(),
                             custom-data: {testInfo: 'information about test or cause of test failure...'}
                           }, callback);
 ```
-</dt>
 
-<h5 class="name" id="allDisabled"><span class="type-signature"></span>2. isJobPassed<span class="signature">(isPassed, callback)</span>
+##### isJobPassed(isPassed, callback)
 
-<h6 class="name" id="allDisabled"><span class="type-signature">Request Fields for 'isJobPassed' method</span> 
+request fields: 
 ```javascript
     passed: [boolean] test result
 ```
-
-<h6 class="name" id="allDisabled"><span class="type-signature">Example</span> 
+example:
 ```javascript
 @After:
 nemo.saucelabs.isJobPassed(!scenario.isFailed(), callback);
 ```
 
-</dt>
+##### getJobUrl()
 
-<h5 class="name" id="allDisabled"><span class="type-signature"></span>3. getJobUrl<span class="signature">()</span>
-
-<h6 class="name" id="allDisabled"><span class="type-signature">Example</span> 
+example: 
 ```javascript
 @After:
 nemo.saucelabs.getJobUrl();
