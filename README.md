@@ -27,7 +27,7 @@ var options = {
               };
                           
 nemo.saucelabs.updateJob(options).then(function(){
-     // process succsss callback
+     // process succsss results
 }).thenCatch(function(err){
      //process error
 });
@@ -45,9 +45,9 @@ example:
 var isPassed = test.isPassed();
 nemo.saucelabs.isJobPassed(isPassed)
     .then(function() {
-       //process success callback;
+       //process success results;
     }).thenCatch(function(err) {
-       //process error callback;
+       //process error;
     })
 ```
 
