@@ -6,32 +6,32 @@
 
 #### nemo-saucelabs@2.x.x : returns webdriver promises
 
-##### 1. Update Sauce Labs Job: updateJob(data)
+##### 1. Update Sauce Labs Job: ` updateJob(data) `
 
-	request fields:
-	```javascript
-	    name:           [string] update the job name,
-	    cucumber_tags:  [scenario.getTags()] nemo-sauce will traverse cucumber tags and get tag names to update the job tags
-	    tags:           [list of strings] array of tags to update the job tags,
-	    build:          [int] The build number being tested,
-	    custom-data:    [JSON] a set of key-value pairs with any extra info that a user would like to add to the job. Max 64KB.
-	```
-	example:
-	```javascript
-	@Before:
-	var options = { 
-	                  name: scenario.getName(),
-	                  cucumber_tags: scenario.getTags(),
-	                  build: build_id,
-	                  custom-data: {testInfo: 'information about test or cause of test failure...'}
-	              };
-	                          
-	nemo.saucelabs.updateJob(options).then(function(){
-	     // process succsss callback
-	}).thenCatch(function(err){
-	     //process error
-	});
-	```
+request fields:
+```javascript
+    name:           [string] update the job name,
+    cucumber_tags:  [scenario.getTags()] nemo-sauce will traverse cucumber tags and get tag names to update the job tags
+    tags:           [list of strings] array of tags to update the job tags,
+    build:          [int] The build number being tested,
+    custom-data:    [JSON] a set of key-value pairs with any extra info that a user would like to add to the job. Max 64KB.
+```
+example:
+```javascript
+@Before:
+var options = { 
+                  name: scenario.getName(),
+                  cucumber_tags: scenario.getTags(),
+                  build: build_id,
+                  custom-data: {testInfo: 'information about test or cause of test failure...'}
+              };
+                          
+nemo.saucelabs.updateJob(options).then(function(){
+     // process succsss callback
+}).thenCatch(function(err){
+     //process error
+});
+```
 
 ##### 2. Update Sauce Labs Job Result: ` isJobPassed(isPassed) `
 
