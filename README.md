@@ -35,34 +35,34 @@ nemo.saucelabs.updateJob(options).then(function(){
 
 ##### 2. Update Sauce Labs Job Result: ` isJobPassed(isPassed) `
 
-	request fields: 
-	```javascript
-	    passed: [boolean] test result
-	```
-	example:
-	```javascript
-	@After:
-	var isPassed = test.isPassed();
-	nemo.saucelabs.isJobPassed(isPassed)
-	    .then(function() {
-	       //process success callback;
-	    }).thenCatch(function(err) {
-	       //process error callback;
-	    })
-	```
+request fields: 
+```javascript
+    passed: [boolean] test result
+```
+example:
+```javascript
+@After:
+var isPassed = test.isPassed();
+nemo.saucelabs.isJobPassed(isPassed)
+    .then(function() {
+       //process success callback;
+    }).thenCatch(function(err) {
+       //process error callback;
+    })
+```
 
 ##### 3. Get Sauce Labs Job URL: ` getJobUrl() `
 
-	example: 
-	```javascript
-	@After:
-	nemo.saucelabs.getJobUrl();
-	//e.g. https://saucelabs.com/tests/153a38fac7ab48869e7b3b9c3c567665, can be printed on report for reference
-	```
+example: 
+```javascript
+@After:
+nemo.saucelabs.getJobUrl();
+//e.g. https://saucelabs.com/tests/153a38fac7ab48869e7b3b9c3c567665, can be printed on report for reference
+```
 
 #### nemo-saucelabs@1.x.x : callback pattern
 
-##### updateJob(data, callback)
+##### 1. Update Sauce Labs Job: ` updateJob(data) `
 
 request fields:
 ```javascript
@@ -85,7 +85,7 @@ var options = {
 nemo.saucelabs.updateJob(options, callback);
 ```
 
-##### isJobPassed(isPassed, callback)
+##### 2. Update Sauce Labs Job Result: ` isJobPassed(isPassed) `
 
 request fields: 
 ```javascript
@@ -97,7 +97,7 @@ example:
 nemo.saucelabs.isJobPassed(!scenario.isFailed(), callback);
 ```
 
-##### getJobUrl()
+##### 3. Get Sauce Labs Job URL: ` getJobUrl() `
 
 example: 
 ```javascript
