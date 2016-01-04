@@ -4,7 +4,7 @@
 
 ### Methods
 
-#### nemo-saucelabs@1.x.x : return webdriver promises
+#### nemo-saucelabs@2.x.x : return webdriver promises
 
 ##### updateJob(data) : returns promise;
 
