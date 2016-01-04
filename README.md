@@ -6,7 +6,7 @@
 
 #### nemo-saucelabs@2.x.x : returns webdriver promises
 
-##### 1. Update Sauce Labs Job: updateJob(data)
+##### 1. Update Sauce Labs Job: ` updateJob(data) `
 
 	request fields:
 	```javascript
@@ -33,7 +33,7 @@
 	});
 	```
 
-##### 2. Update Sauce Labs Job Result: isJobPassed(isPassed)
+##### 2. Update Sauce Labs Job Result: ` isJobPassed(isPassed) `
 
 	request fields: 
 	```javascript
@@ -51,7 +51,7 @@
 	    })
 	```
 
-##### 3. Get Sauce Labs Job URL: getJobUrl()
+##### 3. Get Sauce Labs Job URL: ` getJobUrl() `
 
 	example: 
 	```javascript
