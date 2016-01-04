@@ -4,61 +4,61 @@
 
 ### Methods
 
-#### nemo-saucelabs@2.x.x : return webdriver promises
+#### nemo-saucelabs@2.x.x : returns webdriver promises
 
-##### updateJob(data) : returns promise;
+##### 1. Update Sauce Labs Job: updateJob(data)
 
-request fields:
-```javascript
-    name:           [string] update the job name,
-    cucumber_tags:  [scenario.getTags()] nemo-sauce will traverse cucumber tags and get tag names to update the job tags
-    tags:           [list of strings] array of tags to update the job tags,
-    build:          [int] The build number being tested,
-    custom-data:    [JSON] a set of key-value pairs with any extra info that a user would like to add to the job. Max 64KB.
-```
-example:
-```javascript
-@Before:
-var options = { 
-                  name: scenario.getName(),
-                  cucumber_tags: scenario.getTags(),
-                  build: build_id,
-                  custom-data: {testInfo: 'information about test or cause of test failure...'}
-              };
-                          
-nemo.saucelabs.updateJob(options).then(function(){
-     // process succsss callback
-}).thenCatch(function(err){
-     //process error
-});
-```
+	request fields:
+	```javascript
+	    name:           [string] update the job name,
+	    cucumber_tags:  [scenario.getTags()] nemo-sauce will traverse cucumber tags and get tag names to update the job tags
+	    tags:           [list of strings] array of tags to update the job tags,
+	    build:          [int] The build number being tested,
+	    custom-data:    [JSON] a set of key-value pairs with any extra info that a user would like to add to the job. Max 64KB.
+	```
+	example:
+	```javascript
+	@Before:
+	var options = { 
+	                  name: scenario.getName(),
+	                  cucumber_tags: scenario.getTags(),
+	                  build: build_id,
+	                  custom-data: {testInfo: 'information about test or cause of test failure...'}
+	              };
+	                          
+	nemo.saucelabs.updateJob(options).then(function(){
+	     // process succsss callback
+	}).thenCatch(function(err){
+	     //process error
+	});
+	```
 
-##### isJobPassed(isPassed) : returns promise;
+##### 2. Update Sauce Labs Job Result: isJobPassed(isPassed)
 
-request fields: 
-```javascript
-    passed: [boolean] test result
-```
-example:
-```javascript
-@After:
-var isPassed = test.isPassed();
-nemo.saucelabs.isJobPassed(isPassed)
-    .then(function() {
-       //process success callback;
-    }).thenCatch(function(err) {
-       //process error callback;
-    })
-```
+	request fields: 
+	```javascript
+	    passed: [boolean] test result
+	```
+	example:
+	```javascript
+	@After:
+	var isPassed = test.isPassed();
+	nemo.saucelabs.isJobPassed(isPassed)
+	    .then(function() {
+	       //process success callback;
+	    }).thenCatch(function(err) {
+	       //process error callback;
+	    })
+	```
 
-##### getJobUrl()
+##### 3. Get Sauce Labs Job URL: getJobUrl()
 
-example: 
-```javascript
-@After:
-nemo.saucelabs.getJobUrl();
-//e.g. https://saucelabs.com/tests/153a38fac7ab48869e7b3b9c3c567665, can be printed on report for reference
-```
+	example: 
+	```javascript
+	@After:
+	nemo.saucelabs.getJobUrl();
+	//e.g. https://saucelabs.com/tests/153a38fac7ab48869e7b3b9c3c567665, can be printed on report for reference
+	```
 
 #### nemo-saucelabs@1.x.x : callback pattern
 
