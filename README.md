@@ -27,7 +27,7 @@ var options = {
               };
                           
 nemo.saucelabs.updateJob(options).then(function(){
-     // process succsss results
+     // process success results
 }).thenCatch(function(err){
      //process error
 });
