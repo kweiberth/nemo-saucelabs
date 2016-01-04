@@ -6,7 +6,7 @@
 
 #### nemo-saucelabs@2.x.x : returns webdriver promises
 
-##### 1. Update Sauce Labs Job: ` updateJob(data) `
+##### 1. Update Sauce Labs Job: updateJob(data)
 
 	request fields:
 	```javascript
