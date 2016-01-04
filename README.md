@@ -4,6 +4,64 @@
 
 ### Methods
 
+#### nemo-saucelabs@1.x.x : return webdriver promises
+
+##### updateJob(data) : returns promise;
+
+request fields:
+```javascript
+    name:           [string] update the job name,
+    cucumber_tags:  [scenario.getTags()] nemo-sauce will traverse cucumber tags and get tag names to update the job tags
+    tags:           [list of strings] array of tags to update the job tags,
+    build:          [int] The build number being tested,
+    custom-data:    [JSON] a set of key-value pairs with any extra info that a user would like to add to the job. Max 64KB.
+```
+example:
+```javascript
+@Before:
+var options = { 
+                  name: scenario.getName(),
+                  cucumber_tags: scenario.getTags(),
+                  build: build_id,
+                  custom-data: {testInfo: 'information about test or cause of test failure...'}
+              };
+                          
+nemo.saucelabs.updateJob(options).then(function(){
+     // process succsss callback
+}).thenCatch(function(err){
+     //process error
+});
+```
+
+##### isJobPassed(isPassed) : returns promise;
+
+request fields: 
+```javascript
+    passed: [boolean] test result
+```
+example:
+```javascript
+@After:
+var isPassed = test.isPassed();
+nemo.saucelabs.isJobPassed(isPassed)
+    .then(function() {
+       //process success callback;
+    }).thenCatch(function(err) {
+       //process error callback;
+    })
+```
+
+##### getJobUrl()
+
+example: 
+```javascript
+@After:
+nemo.saucelabs.getJobUrl();
+//e.g. https://saucelabs.com/tests/153a38fac7ab48869e7b3b9c3c567665, can be printed on report for reference
+```
+
+#### nemo-saucelabs@1.x.x : callback pattern
+
 ##### updateJob(data, callback)
 
 request fields:
@@ -17,11 +75,14 @@ request fields:
 example:
 ```javascript
 @Before:
-nemo.saucelabs.updateJob({  name: scenario.getName(),
-                            cucumber_tags: scenario.getTags(),
-                            build: build_id,
-                            custom-data: {testInfo: 'information about test or cause of test failure...'}
-                          }, callback);
+var options = { 
+                  name: scenario.getName(),
+                  cucumber_tags: scenario.getTags(),
+                  build: build_id,
+                  custom-data: {testInfo: 'information about test or cause of test failure...'}
+              };
+                    
+nemo.saucelabs.updateJob(options, callback);
 ```
 
 ##### isJobPassed(isPassed, callback)
