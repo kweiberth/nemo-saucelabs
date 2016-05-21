@@ -14,8 +14,7 @@
   "dependencies": {
     "requestretry": "^1.2.2",
     "debug": "^2.1.3",
-    "underscore": "^1.7.0",
-    "nemo": "^1.0.5"
+    "underscore": "^1.7.0"
   },
   "repository": {
     "type": "git",
