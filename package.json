@@ -1,6 +1,6 @@
 {
   "name": "nemo-saucelabs",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "updates Saucelabs jobs with test information and test results",
   "main": "index.js",
   "author": {
