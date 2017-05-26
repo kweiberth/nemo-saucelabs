@@ -18,7 +18,7 @@
   },
   "peerDependencies": {
     "nemo": "^3.0.0-alpha.6"
-  }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gkushang/nemo-saucelabs.git"
